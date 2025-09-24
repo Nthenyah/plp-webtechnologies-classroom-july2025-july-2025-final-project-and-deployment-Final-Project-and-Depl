@@ -1,0 +1,252 @@
+/* Mobile First Responsive Design */
+
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about-content {
+        gap: 2rem;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .nav-container {
+        padding: 0 20px;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #2c3e50;
+        padding: 1rem 0;
+        text-align: center;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .nav-menu li {
+        margin: 0.5rem 0;
+    }
+    
+    .hero {
+        height: 80vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    section {
+        padding: 80px 0;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .project-card {
+        padding: 1.5rem;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .profile-image img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .project-item img {
+        height: 200px;
+    }
+    
+    .contact-form {
+        max-width: 100%;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    .project-card {
+        padding: 1rem;
+    }
+    
+    .project-image {
+        height: 150px;
+    }
+    
+    .project-item img {
+        height: 150px;
+    }
+    
+    .contact-form input, 
+    .contact-form textarea {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    
+    .footer p {
+        font-size: 0.9rem;
+    }
+    
+    .nav-logo {
+        font-size: 1.2rem;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+}
+
+/* Landscape mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        height: 120vh;
+    }
+    
+    .hero-content {
+        padding: 2rem 0;
+    }
+}
+
+/* High resolution displays */
+@media (min-resolution: 192dpi) {
+    .hero {
+        background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&w=2400&h=1600&fit=crop');
+    }
+}
+
+/* Print styles */
+@media print {
+    .navbar,
+    .footer,
+    .cta-button,
+    .hamburger {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+        color: black;
+    }
+    
+    .hero {
+        background: white !important;
+        color: black !important;
+        height: auto;
+    }
+    
+    .hero-overlay {
+        display: none;
+    }
+    
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+    
+    .project-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .project-card:hover {
+        transform: none;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #ffffff;
+    }
+    
+    .featured {
+        background: #2d2d2d;
+    }
+    
+    .project-card {
+        background: #333;
+        color: white;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        background: #333;
+        color: white;
+        border-color: #555;
+    }
+}
